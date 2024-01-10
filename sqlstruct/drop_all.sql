@@ -1,0 +1,28 @@
+drop table if exists Tourist_attraction;
+drop table if exists Attraction;
+drop table if exists Visa;
+drop table if exists Trip;
+drop table if exists Transport;
+drop table if exists Guide_tour;
+drop table if exists Guide_lang;
+drop table if exists Guide;
+drop table if exists Tour_review;
+drop table if exists Review_src;
+drop table if exists Review_src_type;
+drop table if exists Tourist_tour;
+drop table if exists Tour;
+drop table if exists Agency;
+drop table if exists Tourist_hotel;
+drop table if exists Tourist;
+drop table if exists Hotel_room;
+drop table if exists Hotel;
+drop table if exists Country;
+drop table if exists Language;
+
+drop function if exists get_free_rooms_by_hotel(integer, date, date);
+drop function if exists get_future_tours_by_country(country_name TEXT);
+drop procedure if exists book_hotel_room(tourist_id integer,hotel_id integer,room_id integer,start_date date,end_date date);
+drop procedure if exists issue_visa(integer, integer);
+drop function if exists get_info_for_visa(integer, integer) ;
+drop procedure if exists book_tour(integer, integer);
+drop procedure if exists create_trip(integer, text, text, text, timestamp, timestamp, money);
